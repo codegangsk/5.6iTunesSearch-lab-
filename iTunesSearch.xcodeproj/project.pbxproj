@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A7FDF06255D072600E13001 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FDF05255D072600E13001 /* StoreItem.swift */; };
+		2A7FDF09255D0A3C00E13001 /* URL+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FDF08255D0A3C00E13001 /* URL+Helpers.swift */; };
 		6881F3B31E66032600E14215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6881F3B21E66032600E14215 /* AppDelegate.swift */; };
 		6881F3BA1E66032600E14215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6881F3B91E66032600E14215 /* Assets.xcassets */; };
 		6881F3BD1E66032600E14215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6881F3BB1E66032600E14215 /* LaunchScreen.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2A7FDF05255D072600E13001 /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		2A7FDF08255D0A3C00E13001 /* URL+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Helpers.swift"; sourceTree = "<group>"; };
 		6881F3AF1E66032600E14215 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6881F3B21E66032600E14215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6881F3B91E66032600E14215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				6881F3B21E66032600E14215 /* AppDelegate.swift */,
 				6881F3C81E66034A00E14215 /* StoreItemListTableViewController.swift */,
 				2A7FDF05255D072600E13001 /* StoreItem.swift */,
+				2A7FDF08255D0A3C00E13001 /* URL+Helpers.swift */,
 				6881F3C41E66033D00E14215 /* Main.storyboard */,
 				6881F3B91E66032600E14215 /* Assets.xcassets */,
 				6881F3BB1E66032600E14215 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7FDF06255D072600E13001 /* StoreItem.swift in Sources */,
+				2A7FDF09255D0A3C00E13001 /* URL+Helpers.swift in Sources */,
 				6881F3CC1E66034A00E14215 /* StoreItemListTableViewController.swift in Sources */,
 				6881F3B31E66032600E14215 /* AppDelegate.swift in Sources */,
 			);
