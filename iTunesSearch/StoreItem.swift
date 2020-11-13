@@ -13,6 +13,7 @@ struct StoreItem: Codable {
     var artist: String
     var name: String
     var trackViewUrl: String
+    var artworkUrl: String
     var description: String
     
     enum CodingKeys: String, CodingKey {
@@ -20,6 +21,7 @@ struct StoreItem: Codable {
         case artist = "artistName"
         case name = "trackName"
         case trackViewUrl = "trackViewUrl"
+        case artworkUrl
         case description
     }
 
@@ -33,6 +35,7 @@ struct StoreItem: Codable {
         artist = try values.decode(String.self, forKey: CodingKeys.artist)
         name = try values.decode(String.self, forKey: CodingKeys.name)
         trackViewUrl = try values.decode(String.self, forKey: CodingKeys.trackViewUrl)
+        artworkUrl = try values.decode(String.self, forKey: CodingKeys.artworkUrl)
         
         if let description = try? values.decode(String.self, forKey: CodingKeys.description) {
             self.description = description

@@ -81,9 +81,8 @@ extension StoreItemListTableViewController {
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = item.artist
         
-        let url = item.trackViewUrl
-        
-        //let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, reponse, error) in
+        let url = item.
+        let task = URLSession.shared.dataTask(with: artwo, completionHandler: { (data, reponse, error) in
             
             
         //})
