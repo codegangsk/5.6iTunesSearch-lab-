@@ -55,10 +55,19 @@ extension StoreItemListTableViewController {
             let query: [String: String] = [
                 "term": "eminem",
                 "media": "music",
-                "limit": "25",
+                "limit": "200",
                 "lang": "en_us"
             ]
-            
+            storeItemController.fetchItems(matching: query) {storeItem in
+                if let storeItem = storeItem {
+                    self.items = storeItem
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } else {
+                    print("error")
+                }
+            }
             // use the item controller to fetch items
             // if successful, use the main queue to set self.items and reload the table view
             // otherwise, print an error to the console
