@@ -5,7 +5,6 @@ class StoreItemListTableViewController: UITableViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     
-    // add item controller property
     let storeItemController = StoreItemController()
     var items = [StoreItem]()
     let queryOptions = ["movie", "music", "software", "ebook"]
@@ -69,9 +68,6 @@ extension StoreItemListTableViewController {
                     print("error")
                 }
             }
-            // use the item controller to fetch items
-            // if successful, use the main queue to set self.items and reload the table view
-            // otherwise, print an error to the console
         }
     }
     
@@ -81,14 +77,16 @@ extension StoreItemListTableViewController {
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = item.artist
         
-        let url = item.
-        let task = URLSession.shared.dataTask(with: artwo, completionHandler: { (data, reponse, error) in
-            
-            
-        //})
-        // initialize a network task to fetch the item's artwork
-        // if successful, use the main queue capture the cell, to initialize a UIImage, and set the cell's image view's image to the
-        // resume the task
+        let url = item.artworkUrl
+        
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, reponse, error) in
+            guard let data = data,
+                  let image = UIImage(data: data) else { return }
+            DispatchQueue.main.async {
+                cell.imageView?.image = image
+            }
+        })
+        task.resume()
     }
 }
 
