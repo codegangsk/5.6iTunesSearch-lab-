@@ -6,7 +6,7 @@ class StoreItemListTableViewController: UITableViewController {
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     
     // add item controller property
-    let storeItemController = StoreItemListTableViewController()
+    let storeItemController = StoreItemController()
     var items = [StoreItem]()
     let queryOptions = ["movie", "music", "software", "ebook"]
 }
@@ -52,8 +52,12 @@ extension StoreItemListTableViewController {
         let mediaType = queryOptions[filterSegmentedControl.selectedSegmentIndex]
         
         if !searchTerm.isEmpty {
-            
-            // set up query dictionary
+            let query: [String: String] = [
+                "term": "eminem",
+                "media": "music",
+                "limit": "25",
+                "lang": "en_us"
+            ]
             
             // use the item controller to fetch items
             // if successful, use the main queue to set self.items and reload the table view
