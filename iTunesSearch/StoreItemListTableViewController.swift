@@ -54,8 +54,8 @@ extension StoreItemListTableViewController {
         
         if !searchTerm.isEmpty {
             let query: [String: String] = [
-                "term": "eminem",
-                "media": "music",
+                "term": "\(searchTerm)",
+                "media": "\(mediaType)",
                 "limit": "200",
                 "lang": "en_us"
             ]
@@ -80,10 +80,13 @@ extension StoreItemListTableViewController {
         
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = item.artist
-        // set label to the item's name
-        // set detail label to the item's subtitle
-        // reset the image view to the gray image
         
+        let url = item.trackViewUrl
+        
+        //let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, reponse, error) in
+            
+            
+        //})
         // initialize a network task to fetch the item's artwork
         // if successful, use the main queue capture the cell, to initialize a UIImage, and set the cell's image view's image to the
         // resume the task
