@@ -6,8 +6,8 @@ class StoreItemListTableViewController: UITableViewController {
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     
     // add item controller property
-    
-    var items = [String]()
+    let storeItemController = StoreItemListTableViewController()
+    var items = [StoreItem]()
     let queryOptions = ["movie", "music", "software", "ebook"]
 }
 
@@ -64,7 +64,7 @@ extension StoreItemListTableViewController {
     func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let item = items[indexPath.row]
         
-        cell.textLabel?.text = item
+        cell.textLabel?.text = item.name
         
         // set label to the item's name
         // set detail label to the item's subtitle
