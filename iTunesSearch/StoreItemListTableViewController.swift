@@ -14,6 +14,7 @@ class StoreItemListTableViewController: UITableViewController {
 extension StoreItemListTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }
 
@@ -78,7 +79,7 @@ extension StoreItemListTableViewController {
         let item = items[indexPath.row]
         
         cell.textLabel?.text = item.name
-        
+        cell.detailTextLabel?.text = item.artist
         // set label to the item's name
         // set detail label to the item's subtitle
         // reset the image view to the gray image
