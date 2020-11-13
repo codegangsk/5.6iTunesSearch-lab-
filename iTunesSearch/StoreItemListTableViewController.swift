@@ -60,8 +60,8 @@ extension StoreItemListTableViewController {
             ]
             storeItemController.fetchItems(matching: query) {storeItem in
                 if let storeItem = storeItem {
-                    self.items = storeItem
                     DispatchQueue.main.async {
+                        self.items = storeItem
                         self.tableView.reloadData()
                     }
                 } else {
