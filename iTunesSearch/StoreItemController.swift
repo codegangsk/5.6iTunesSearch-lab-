@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StoreItemControllerClass {
+class StoreItemController {
     func fetchItems(matching query: [String: String], completion: @escaping ([StoreItem]?) -> Void) {
         let baseURL = URL(string: "https://itunes.apple.com/search?")!
         
